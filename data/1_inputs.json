@@ -1,0 +1,13 @@
+{
+  "birds_per_hour": 13500,
+  "avg_weight_kg_per_bird": 1.8,
+  "pallet_net_kg": 600,
+  "buffer_hours": 2,
+  "ramps": 4,
+  "target_dwell_min_per_truck": 40,
+  "truck_payload_kg": 16000,
+  "shift_hours": 8,
+  "fresh_shelf_life_days": 7,
+  "pre_alert_temp_c": 3.5,
+  "alert_temp_c": 4.0
+}
