@@ -1,0 +1,23 @@
+{
+  "prioritization": "FEFO over FIFO at picking; block non-FEFO choices unless approved with reason",
+  "temperature": {
+    "pre_alert_c": 3.5,
+    "alert_c": 4.0,
+    "action_on_alert": "STOP & FIX"
+  },
+  "fefo_colors": {
+    "red_max_days": 2,
+    "yellow_min": 3,
+    "yellow_max": 5,
+    "green_min": 6
+  },
+  "capacity_formulas": {
+    "masa_kg_h": "birds_per_hour * avg_weight_kg_per_bird",
+    "paleti_h": "masa_kg_h / pallet_net_kg",
+    "camioane_necesare_h": "masa_kg_h / truck_payload_kg",
+    "capacitate_rampa_h": "ramps * (60 / target_dwell_min_per_truck)",
+    "gap": "capacitate_rampa_h - camioane_necesare_h",
+    "buffer_recomandat_paleti": "paleti_h * buffer_hours"
+  },
+  "traceability": "Un pas înapoi / un pas înainte pe lot; foto + CMR/POD unde e cazul"
+}

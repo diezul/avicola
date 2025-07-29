@@ -1,0 +1,28 @@
+INSTRUCTIUNI PENTRU V0 — set minim, 9 fisiere
+Actualizat: 2025-07-29T15:26:47.614977Z
+
+Ordinea recomandata de incarcare:
+1) 1_inputs.json — parametrii si pragurile de baza.
+2) 5_rules.json — reguli de business si formulele KPI.
+3) 7_model.json — tabele/fields (sugestie).
+4) 6_pages.json — pagini/fluxuri si componente.
+5) 2_data_seed.json — seed pentru checklists/risks/cnv/raci/standup.
+6) 3_planner_template.csv — rânduri prepopulate pentru planner.
+7) 4_monitor_fefo_template.csv — headere pentru tabelul FEFO.
+8) 8_tests.json — teste de acceptanta.
+9) 9_instructions.txt — acest fisier (ghid).
+
+KPI/Calcul:
+- masa_kg_h = birds_per_hour * avg_weight_kg_per_bird
+- paleti_h = masa_kg_h / pallet_net_kg
+- camioane_necesare_h = masa_kg_h / truck_payload_kg
+- capacitate_rampa_h = ramps * (60 / target_dwell_min_per_truck)
+- gap = capacitate_rampa_h - camioane_necesare_h
+- buffer_recomandat_paleti = paleti_h * buffer_hours
+
+Reguli critice:
+- FEFO > FIFO la picking (blocaj daca se alege altceva, cere aprobare + motiv).
+- Pre-alert 3.5°C; alert ≥ 4.0°C => STOP & FIX (opreste, izoleaza, remediaza, documenteaza).
+- FEFO colors: ROSU ≤2 zile, GALBEN 3–5, VERDE >5.
+
+Livrabile: pagini Dashboard, FEFO, Planner, Check-listuri, Incidente & RACI, Stand-up, Setari.

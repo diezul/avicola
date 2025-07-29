@@ -1,0 +1,45 @@
+[
+  {
+    "name": "FEFO picking",
+    "steps": [
+      "Creează 3 loturi cu 1/4/7 zile rămase",
+      "Creează o comandă client",
+      "Verifică: se propune lotul cu 1 zi primul; alt lot cere aprobare + motiv"
+    ]
+  },
+  {
+    "name": "Temperatură la încărcare",
+    "steps": [
+      "Simulează temp_preload_c = 4.2",
+      "Aplicația blochează încărcarea, deschide STOP & FIX, cere foto + notiță"
+    ]
+  },
+  {
+    "name": "Gap rampă",
+    "steps": [
+      "Cu inputs default, cap_rampa_h = 6, necesar ≈ 1.52, gap > 0",
+      "Schimbă dwell la 60 min și verifică gap"
+    ]
+  },
+  {
+    "name": "Lot roșu >24h",
+    "steps": [
+      "Marchează lot ≤2 zile",
+      "Dacă nu iese în 24h, generează alertă + task în Stand-up"
+    ]
+  },
+  {
+    "name": "RACI incident",
+    "steps": [
+      "Creează incident 'Mix loturi'",
+      "Auto-populează R,A,C,I și setează SLA"
+    ]
+  },
+  {
+    "name": "Export",
+    "steps": [
+      "Exportă Stand-up ca PDF",
+      "Exportă Monitor FEFO ca CSV"
+    ]
+  }
+]

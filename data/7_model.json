@@ -1,0 +1,106 @@
+{
+  "tables": {
+    "Products": {
+      "id": "uuid",
+      "name": "string",
+      "packaging": "string",
+      "temp_target_c": "number"
+    },
+    "Lots": {
+      "id": "uuid",
+      "product_id": "uuid",
+      "lot_no": "string",
+      "prod_date": "date",
+      "exp_date": "date",
+      "qty_units": "number",
+      "qty_kg": "number"
+    },
+    "Pallets": {
+      "id": "uuid",
+      "lot_id": "uuid",
+      "net_kg": "number",
+      "zone": "string",
+      "slot": "string",
+      "status": "string"
+    },
+    "Orders": {
+      "id": "uuid",
+      "client": "string",
+      "due_at": "datetime",
+      "status": "string"
+    },
+    "OrderLines": {
+      "id": "uuid",
+      "order_id": "uuid",
+      "product_id": "uuid",
+      "qty_kg": "number",
+      "lot_id": "uuid?"
+    },
+    "PickTasks": {
+      "id": "uuid",
+      "order_id": "uuid",
+      "pallet_id": "uuid",
+      "priority": "number",
+      "status": "string"
+    },
+    "Trucks": {
+      "id": "uuid",
+      "route": "string",
+      "payload_kg": "number",
+      "temp_preload_c": "number",
+      "seal_no": "string"
+    },
+    "Ramps": {
+      "id": "uuid",
+      "name": "string",
+      "is_active": "boolean"
+    },
+    "TemperatureLogs": {
+      "id": "uuid",
+      "context": "string",
+      "value_c": "number",
+      "time": "datetime",
+      "truck_id": "uuid?",
+      "pallet_id": "uuid?"
+    },
+    "Incidents": {
+      "id": "uuid",
+      "type": "string",
+      "lot_id": "uuid?",
+      "temp_c": "number?",
+      "ramp_id": "uuid?",
+      "photos": "string[]",
+      "description": "string",
+      "status": "string",
+      "sla_deadline": "datetime",
+      "owner_R": "string",
+      "accountable_A": "string",
+      "consulted_C": "string",
+      "informed_I": "string"
+    },
+    "Checklists": {
+      "id": "uuid",
+      "stage_no": "number",
+      "item_text": "string",
+      "done_by": "string",
+      "done_at": "datetime?",
+      "photo": "string?"
+    },
+    "CNVScripts": {
+      "id": "uuid",
+      "situation": "string",
+      "observation": "string",
+      "feeling": "string",
+      "need": "string",
+      "request": "string"
+    },
+    "KPI": {
+      "day": "date",
+      "pallets_per_hour": "number",
+      "trucks_needed_per_hour": "number",
+      "ramp_capacity_per_hour": "number",
+      "buffer_pallets": "number",
+      "red_lots_count": "number"
+    }
+  }
+}

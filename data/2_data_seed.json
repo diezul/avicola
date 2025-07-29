@@ -1,0 +1,274 @@
+{
+  "checklists": {
+    "CL_1_Primire": [
+      "Slot confirmat pentru camion",
+      "Zona tampon liberă și curată",
+      "T în depozit ≤ 4°C; termometre calibrate",
+      "Documente: aviz/comandă corelate",
+      "Eșantion: scan 3 baxuri din fiecare lot",
+      "Dacă T>4°C sau documente greșite: STOP + izolare + anunț coordonator"
+    ],
+    "CL_2_Slotare": [
+      "Etichete lot lizibile",
+      "Marcaje roșu/galben/verde pe expirări",
+      "Zone: „Descarci aici” vs „Iei de aici”",
+      "Alei acces rapide la lot vechi",
+      "WMS: introducere lot + dată expirare imediat"
+    ],
+    "CL_3_Picking": [
+      "Scaner test OK la start",
+      "Liste picking sincronizate",
+      "Picking din ROȘU înainte de toate",
+      "Verificare dublă la palet: produs, lot, cantitate",
+      "Blochează picking dacă lipsește FEFO"
+    ],
+    "CL_4_Incarcare": [
+      "T camion ≤ 4°C înainte de încărcare",
+      "Palet etichetat + foto standard",
+      "Completitudine vs comandă",
+      "Sigiliu aplicat și notat în CMR",
+      "Instrucțiuni șofer privind T și traseu"
+    ],
+    "CL_5_Transport": [
+      "Logger/telemetrie activată",
+      "Alarme: pre-alert 3.5°C, alert 4.0°C",
+      "Procedură STOP & FIX dacă T ≥ 4.0°C",
+      "Raport POD cu T la descărcare"
+    ],
+    "CL_6_Predare": [
+      "Măsurare T la descărcare",
+      "Confirmare cantitate/loturi",
+      "POD/CMR semnat + foto dacă e cazul",
+      "Ticket intern pentru abateri"
+    ],
+    "CL_7_Retururi": [
+      "Carantină lot + segregare în WMS",
+      "Trasabilitate: „un pas înapoi/înainte”",
+      "Decizie: re-sortare / distrugere / retur",
+      "Informare client + QA"
+    ],
+    "CL_8_Inventar": [
+      "ABC cycle counting",
+      "Audit lot/expirare vs WMS",
+      "Raport diferențe + corecții",
+      "Predare-primire între ture"
+    ],
+    "CL_9_KPI_Training": [
+      "Raport săptămânal FEFO & Picking",
+      "Andon frigorific: incidente și cauze",
+      "Micro-training 10' pe un subiect",
+      "O măsură/incident, proprietar, termen"
+    ]
+  },
+  "risks": [
+    {
+      "risk": "Depășire T ≥ Alert",
+      "loc": "Recepție/Încărcare/Transport",
+      "prevention": "Monitorizare T, Andon, Stop & Fix",
+      "owner": "QA + Șef tură",
+      "target_time": "Imediat"
+    },
+    {
+      "risk": "Documente greșite/lipsă",
+      "loc": "Recepție",
+      "prevention": "Zonă tampon, scan, validare coordonator",
+      "owner": "Recepție",
+      "target_time": "15 min"
+    },
+    {
+      "risk": "Blocaj rampă",
+      "loc": "Rampă",
+      "prevention": "Realocare rampă, zonă tampon, re-slotare",
+      "owner": "Șef rampă",
+      "target_time": "10 min"
+    },
+    {
+      "risk": "Etichete lipsă/ilizibile",
+      "loc": "Slotare",
+      "prevention": "Etichete temporare + foto, audit zilnic",
+      "owner": "Operator certificat",
+      "target_time": "30 min"
+    },
+    {
+      "risk": "Marfă nouă blochează vechiul stoc",
+      "loc": "Slotare",
+      "prevention": "Slotare dedicată + marcaje",
+      "owner": "Gestionar",
+      "target_time": "1 h"
+    },
+    {
+      "risk": "Scaner/WMS defect",
+      "loc": "Picking",
+      "prevention": "Test la start, plan B manual, IT on-call",
+      "owner": "IT + Șef tură",
+      "target_time": "Imediat"
+    },
+    {
+      "risk": "Încărcare incompletă/sigiliu",
+      "loc": "Încărcare",
+      "prevention": "Checklist + foto, sigiliu de rezervă",
+      "owner": "Încărcare",
+      "target_time": "Imediat"
+    },
+    {
+      "risk": "Camion neigienic",
+      "loc": "Încărcare",
+      "prevention": "Refuz temporar, curățare",
+      "owner": "QA + Șofer",
+      "target_time": "Imediat"
+    },
+    {
+      "risk": "Bypass FEFO la urgențe",
+      "loc": "Picking",
+      "prevention": "Semafor FEFO, blocaj logic în WMS",
+      "owner": "Șef picking",
+      "target_time": "Imediat"
+    },
+    {
+      "risk": "Trasabilitate slabă (mix loturi)",
+      "loc": "Toate",
+      "prevention": "Separare fizică, GS1 corect, audit",
+      "owner": "Gestionar",
+      "target_time": "Imediat"
+    },
+    {
+      "risk": "Zgomot/haos operațional",
+      "loc": "Toate",
+      "prevention": "Pauză 5', regrupare, reluare",
+      "owner": "Șef tură",
+      "target_time": "5 min"
+    },
+    {
+      "risk": "Operator nou/nesigur",
+      "loc": "Toate",
+      "prevention": "Micro-training + shadowing 1:1",
+      "owner": "Trainer de tură",
+      "target_time": "În prima zi"
+    },
+    {
+      "risk": "Meteo nefavorabil",
+      "loc": "Încărcare",
+      "prevention": "Replanificare sloturi, protecții",
+      "owner": "Dispecer",
+      "target_time": "În aceeași zi"
+    },
+    {
+      "risk": "Conflict între echipe",
+      "loc": "Toate",
+      "prevention": "Stand-up 10', canale clare",
+      "owner": "Șef tură",
+      "target_time": "Zilnic"
+    },
+    {
+      "risk": "Supraîncărcare traseu picking",
+      "loc": "Picking",
+      "prevention": "Reproiectare traseu, rotație",
+      "owner": "Șef picking",
+      "target_time": "24 h"
+    }
+  ],
+  "cnv": [
+    {
+      "situation": "Lot neclar la recepție",
+      "observation": "Când văd 3 baxuri fără etichetă în lotul 10117",
+      "feeling": "Mă îngrijorez",
+      "need": "Am nevoie de trasabilitate completă",
+      "request": "Poți aplica eticheta temporară și fotografia dovada acum?"
+    },
+    {
+      "situation": "Bypass FEFO la picking",
+      "observation": "Ai preluat din slot 21 deși 16B era roșu",
+      "feeling": "Sunt neliniștit",
+      "need": "Avem nevoie să respectăm FEFO pentru prospețime",
+      "request": "Te rog refă picking-ul din 16B și anunță dacă accesul e blocat"
+    },
+    {
+      "situation": "Temperatură camion ridicată",
+      "observation": "Termometrul arată 5.2°C în camion",
+      "feeling": "Sunt îngrijorat",
+      "need": "Trebuie să protejăm siguranța produsului",
+      "request": "Oprim încărcarea, readucem T sub 4°C și notăm remedierea în CMR?"
+    },
+    {
+      "situation": "Aviz neconform",
+      "observation": "Avizul camionului 384 nu corespunde comenzii",
+      "feeling": "Sunt îngrijorat",
+      "need": "Am nevoie de recepție corectă sau izolare",
+      "request": "Confirmi în scris recepția sau izolarea până la clarificare?"
+    },
+    {
+      "situation": "Predare-primire între ture",
+      "observation": "În zona A avem două loturi galbene >5 zile",
+      "feeling": "Sunt atent",
+      "need": "Trebuie să reducem riscul de expirare",
+      "request": "Prioritizezi ieșirea lor în prima oră a turei?"
+    },
+    {
+      "situation": "Substituție client",
+      "observation": "Produsul Y e lipsă în comanda dvs.",
+      "feeling": "Îmi pare rău",
+      "need": "Îmi doresc să livrăm complet",
+      "request": "Acceptați X ca substituție sau o a doua livrare mâine la 07:00?"
+    }
+  ],
+  "raci": [
+    {
+      "incident": "Abatere temperatură",
+      "R": "Mentenanță",
+      "A": "Șef tură",
+      "C": "QA",
+      "I": "Client"
+    },
+    {
+      "incident": "Mix loturi",
+      "R": "Gestionar",
+      "A": "Șef tură",
+      "C": "QA",
+      "I": "Client"
+    },
+    {
+      "incident": "Lipsă documente",
+      "R": "Recepție",
+      "A": "Șef tură",
+      "C": "Coordonator",
+      "I": "Client"
+    },
+    {
+      "incident": "Camion întârziat",
+      "R": "Dispecer",
+      "A": "Șef tură",
+      "C": "Client",
+      "I": "QA"
+    }
+  ],
+  "standup_template": [
+    {
+      "element": "Camioane programate (ora/rută)",
+      "notes": ""
+    },
+    {
+      "element": "Loturi ROȘII (≤2 zile) de evacuat azi",
+      "notes": ""
+    },
+    {
+      "element": "Riscuri/Andon frigorific",
+      "notes": ""
+    },
+    {
+      "element": "Blocaje rampă/mentenanță",
+      "notes": ""
+    },
+    {
+      "element": "Operatori noi/briefing",
+      "notes": ""
+    },
+    {
+      "element": "Decizii & responsabil (RACI)",
+      "notes": ""
+    },
+    {
+      "element": "Feedback de ieri (erori picking, neconformități)",
+      "notes": ""
+    }
+  ]
+}

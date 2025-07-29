@@ -1,0 +1,67 @@
+[
+  {
+    "path": "/dashboard",
+    "name": "Dashboard",
+    "components": [
+      "KPI",
+      "CriticeAzi"
+    ]
+  },
+  {
+    "path": "/fefo",
+    "name": "Monitor FEFO",
+    "components": [
+      "TableFEFO",
+      "ActionsFEFO"
+    ]
+  },
+  {
+    "path": "/planner-rampa",
+    "name": "Planner Rampă",
+    "components": [
+      "PlannerTable",
+      "GapAlerts"
+    ]
+  },
+  {
+    "path": "/checklists",
+    "name": "Check-listuri 9 Etape",
+    "components": [
+      "Checklists",
+      "StopFixButton"
+    ]
+  },
+  {
+    "path": "/comenzi-picking",
+    "name": "Comenzi & Picking",
+    "components": [
+      "Orders",
+      "PickValidationFEFO"
+    ]
+  },
+  {
+    "path": "/incidente-raci",
+    "name": "Incidente & RACI",
+    "components": [
+      "IncidentForm",
+      "RACIView",
+      "SLA"
+    ]
+  },
+  {
+    "path": "/standup",
+    "name": "Stand-up Zilnic",
+    "components": [
+      "StandupTemplate",
+      "ExportPDF"
+    ]
+  },
+  {
+    "path": "/setari",
+    "name": "Setări & Inputs",
+    "components": [
+      "InputsEditor",
+      "Thresholds"
+    ]
+  }
+]
